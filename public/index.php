@@ -1,101 +1,114 @@
-<?php
-	session_start();
-	unset( $_SESSION['user'] );
-
-?><!DOCTYPE html>
-<html ng-app="loginApp" ng-controller="mainCtrl">
-  <head>
+<!DOCTYPE html>
+<html lang="en"><head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SV | Log in</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  
+    <meta>
+
+                <link  href="https://assets-cdn.github.com/assets/frameworks-4ba00b1aa0227e4b7a7961544c3b7938afb2720757a471735991ec4475c829e0.css"  media="all" rel="stylesheet">
+                <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-58379f1df1b69ce1dd2c61fdcd18a968b8f18cc04ef12fc651d97fa2202f7b82.css" integrity="sha256-WDefHfG2nOHdLGH9zRipaLjxjMBO8S/GUdl/oiAve4I=" media="all" rel="stylesheet">
+                
+  
+  
+  
+  <title>Iniciar Sesión | SV</title>
     
-    <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    
-    <!-- Theme style -->
-    <link rel="stylesheet" href="AdminLTE.min.css">
-    
-	<script src="angular/lib/angular.min.js"></script>
-	<script src="angular/app.js"></script>
-	<script src="angular/servicios/login_service.js"></script>
+  <link rel="icon" type="image/x-icon" href="../sis/dist/img/LOGO-SISTEMAS0.png">
+
 
   </head>
 
-  <body class="hold-transition login-page">
+  <body class="logged-out env-production session-authentication page-responsive min-width-0 chrome-mouse">
+    
 
-    <div class="login-box">
-      <div class="login-logo">
+    
+    
+    
+
+
+
+      <div class="header header-logged-out width-full pt-5 pb-4" role="banner">
+  <div class="container clearfix width-full">
+    <a class="header-logo">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="48" version="1.1" viewBox="0 0 16 16" width="48"><path fill-rule="evenodd" d="../sis/dist/img/LOGO-SISTEMAS0.png"></path></svg>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+  
+
+
+
+  <div role="main">
+
+      <div id="js-pjax-container" data-pjax-container="">
         
-        <a href=""><b>Sistema Ventas</b>SIS</a>
 
-      </div><!-- /.login-logo -->
+<div class="auth-form px-3" id="login">
 
+<form accept-charset="UTF-8" action="/session" method="post">
 
-      <div class="login-box-body">
-
-        <p class="login-box-msg">Ingrese su <b>Usurio</b> y <b>Contraseña</b> correctas</p>
-
-        <form name="forma" ng-submit=" ingresar( datos ) ">
-              
-          <div class="form-group has-feedback">
-            
-            <input type="text" 
-            	   class="form-control" 
-            	   placeholder="Usuario"
-            	   name="usuario"
-            	   required="required"
-            	   ng-model="datos.usuario">
-
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-          </div>
-
-          <div class="form-group has-feedback">
-            <input type="password" 
-                   class="form-control" 
-                   placeholder="Contraseña"
-                   name="contrasena"
-                   required="required"
-            	   ng-model="datos.contrasena">
-
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12">
-              <button type="submit" 
-              		  class="btn btn-success btn-block btn-flat"
-              		  ng-disabled="forma.$invalid || cargando">Ingresar</button>
-            </div><!-- /.col -->
-          </div>
+          
+    <div class="auth-form-header p-0">
+        <h1>Iniciar Sesión en Sistema de Ventas</h1>
+      </div>
 
 
-		<div class="row" ng-show="invalido">
-			<div class="col-md-12">
-				<br>
-				<div class="alert alert-danger">
-					<strong>Verificar!</strong>
-					{{ mensaje }}
-				</div>
-			</div>
-		</div>
+      <div id="js-flash-container">
+      </div>
+
+
+      <div class="auth-form-body mt-3">
+
+        <label>
+          Nombre de usuario
+        </label>
+        <input autocapitalize="off" autocorrect="off" autofocus="autofocus" class="form-control input-block"name="usuario" tabindex="1" type="text">
+
+        <label for="password">
+          Contraseña <a href="" class="label-link">Olvido Contraseña?</a>
+        </label>
+        <input class="form-control form-control input-block" type="password">
+
+        <input class="btn btn-primary btn-block"  tabindex="3" type="submit" value="Ingresar">
+      </div>
+</form>
+
+      <p class="create-account-callout mt-3">
+        Solo Personal Autorizado
+      </p>
+</div>
+
+      </div>
+      <div class="modal-backdrop js-touch-events"></div>
+  </div>
+
+      <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links">
+        <li><a href="https://www.google.com.pe/?gfe_rd=cr&ei=x551WOfWLuSw8we6yLuoBw" data-ga-click="Footer, go to terms, text:terms">Google</a></li>
+        <li><a href="#" data-ga-click="Footer, go to privacy, text:privacy">Privacidad</a></li>
+        <li><a href="#" data-ga-click="Footer, go to security, text:security">Seguridad</a></li>
+        <li><a href="#" data-ga-click="Footer, go to contact, text:contact">Contacta a Sistema de Ventas</a></li>
+    </ul>
+  </div>
 
 
 
-        </form>
+    
+    
+    
+    
+    
+    
+  
+  
+
+  
 
 
-      </div><!-- /.login-box-body -->
-    </div><!-- /.login-box -->
-
-
-
-
-
-  </body>
+</body>
 </html>
+
+
