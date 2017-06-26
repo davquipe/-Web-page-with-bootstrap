@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8">
-  
-    <meta>
-
-                <link  href="https://assets-cdn.github.com/assets/frameworks-4ba00b1aa0227e4b7a7961544c3b7938afb2720757a471735991ec4475c829e0.css"  media="all" rel="stylesheet">
-                <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-58379f1df1b69ce1dd2c61fdcd18a968b8f18cc04ef12fc651d97fa2202f7b82.css" integrity="sha256-WDefHfG2nOHdLGH9zRipaLjxjMBO8S/GUdl/oiAve4I=" media="all" rel="stylesheet">
+  <meta charset="utf-8">
+  <link  href="https://assets-cdn.github.com/assets/frameworks-4ba00b1aa0227e4b7a7961544c3b7938afb2720757a471735991ec4475c829e0.css"  rel="stylesheet">
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-58379f1df1b69ce1dd2c61fdcd18a968b8f18cc04ef12fc651d97fa2202f7b82.css" integrity="" rel="stylesheet">
                 
   
   
@@ -18,21 +15,10 @@
   </head>
 
   <body class="logged-out env-production session-authentication page-responsive min-width-0 chrome-mouse">
-    
-
-    
-    
-    
-
-
-
-      <div class="header header-logged-out width-full pt-5 pb-4" role="banner">
-  <div class="container clearfix width-full">
-    <a class="header-logo">
-      <svg aria-hidden="true" class="octicon octicon-mark-github" height="48" version="1.1" viewBox="0 0 16 16" width="48"><path fill-rule="evenodd" d="../sis/dist/img/LOGO-SISTEMAS0.png"></path></svg>
-    </a>
+  
+  <div class="header header-logged-out width-full pt-5 pb-4" role="banner">
+  
   </div>
-</div>
 
 
   </div>
@@ -52,7 +38,7 @@
 
           
     <div class="auth-form-header p-0">
-        <h1>Iniciar Sesión en Sistema de Ventas</h1>
+        <h1>Iniciando Sesión en <b>Sistema de Ventas</b></h1>
       </div>
 
 

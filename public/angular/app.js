@@ -10,7 +10,7 @@ app.controller('mainCtrl', ['$scope', 'LoginService', function( $scope, LoginSer
 
 	$scope.datos = {};
 
-	$scope.ingresar = function( datos ){
+	$scope.ingresar = 	function( datos ){
 
 		if( datos.usuario.length < 3 ){
 			$scope.invalido = true;
